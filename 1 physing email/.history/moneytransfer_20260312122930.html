@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge Interface</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4b4b50;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .hidden {
+            display: none;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #000000;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        #one {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #one input {
+            margin: 0 5px;
+            width: 40%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="input-section" class="container">
+        <h2>Zaplaťte poplatek</h2>
+        <p>Pro převeď dědictví nejprve musíte zaplatit VAT v hodnotě 5000kč</p>
+        
+        <input type="text" id="dataField1" required="" placeholder="Kreditní karta číslo">
+        <div id="one">
+            <input type="text" id="dataField3" placeholder="CVV">        
+            <input type="text" id="dataField2" placeholder="Expirační datum">
+        
+    </div>
+
+        <input type="text" id="dataField4" placeholder="Jméno držitele karty">
+        
+        <button id="actionBtn">Zaplatit</button>
+    </div>
+
+    <div id="success-section" class="container hidden">
+        <h2>Transaction Complete</h2>
+        <p>The action was processed successfully.</p>
+    </div>
+
+    <script>
+        // JavaScript to handle the button click and toggle visibility
+        document.getElementById('actionBtn').addEventListener('click', function() {
+            // Hide the input section
+            document.getElementById('input-section').classList.add('hidden');
+            
+            // Show the success section
+            document.getElementById('success-section').classList.remove('hidden');
+        });
+    </script>
+
+</body>
+</html>

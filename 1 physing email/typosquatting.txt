@@ -1,0 +1,14 @@
+From: Microsoft Security Team <support.rnicrosofl.com>
+To: victim@lol.test
+Subject: Podezřelé přihlášení k vašemu účtu
+Reply-To: support@rnicrosofl.com
+Message-ID: <alert-48291@rnicrosofl.com>
+
+Vážený uživateli,
+Náš bezpečnostní tým detekoval, možné neautorizované přihlášení do vašeho účtu Microsoft.
+
+Pro další akci běžte na support.mіcrоѕоft.com/defence.html
+
+S Pozdravem,
+Tým, který se stará o účty Microsoft
+

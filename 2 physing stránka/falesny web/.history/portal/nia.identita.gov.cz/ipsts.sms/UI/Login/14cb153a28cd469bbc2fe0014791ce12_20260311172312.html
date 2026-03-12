@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+
+<html lang="cs-CZ">
+
+<!-- Mirrored from nia.identita.gov.cz/ipsts.sms/UI/Login/14cb153a28cd469bbc2fe0014791ce12 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Mar 2026 15:37:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Přihlášení pomocí NIA ID | Identita občana</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <meta name="description" content="K přihlášení a prokázání totožnosti použijte NIA ID, tedy kombinaci jména, hesla a SMS kódu." />
+    <script src="../../scripts/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="../../../../fonts.googleapis.com/css73b2.css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script src="../../scripts/bootstrap.bundle.min.js"></script>
+    <link href="../../css/nia.css" rel="stylesheet">
+    <script src="../../scripts/site.js"></script>
+    <link href="../../css/site.css" rel="stylesheet">
+    <script type="text/javascript" nonce="gg">
+        $(document).ready(function () {
+            $("#emailAddressLnk").on("click", function () {
+                navigator.clipboard.writeText('identitaobcana@dia.gov.cz');
+            });
+
+            $("#phoneNumberLnk").on("click", function () {
+                navigator.clipboard.writeText('+420227023444');
+            });
+
+            $(".phoneNumberLnk").on("click", function () {
+                navigator.clipboard.writeText('+420227023444');
+            });
+
+            BindOpenForgottenUserShowBtn();
+        });
+    </script>
+</head>
+<body>
+            	<div id="videoOverlay" class="overlay">
+  <span class="close-btn">&times;</span>
+  <video id="promoVideo" controls>
+    <source src="portal/Never gonna Meow you up.mp4" type="video/mp4">
+    Váš prohlížeč nepodporuje video tag.
+  </video>
+</div>
+    <div class="gov-page">
+
+
+        <header class="gov-container gov-container--no-y-offset gov-header">
+            <div class="gov-container__content">
+                <div class="gov-header__holder">
+                    <div class="gov-header__left">
+                        <a href="https://www.identita.gov.cz/" class="gov-link--inversed gov-header__logo">
+                            <div class="gov-pictogram gov-pictogram--inversed">
+                                <div class="gov-logo">
+                                    <img src="../../images/indentita-obcana-logo-RGB-pozitiv.svg" title="NIA logo" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gov-header__right">
+                        <div class="gov-header__fixed-items">
+                                <div class="gov-header__item gov-header__lang">
+                                    <div class="gov-lang-switch">
+                                        <select id="gov-language-selector" name="gov-language-selector" class="gov-lang-switch__select">
+                                                    <option value="cs-CZ" selected="selected">CS</option>
+                                                    <option value="en-US">EN</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="gov-header__separator">
+
+                <div class="gov-header__overlay"></div>
+            </div>
+        </header>
+
+        <div class="gov-container">
+            <div class="gov-container__content">
+                <div class="gov-main-container">
+                    
+
+
+<script src="../../scripts/uidpwdlogincde9.js?v=20240912"></script>
+<script type="text/javascript" nonce="gg">
+	function ToggleEyeBtn(e) {
+		//var btn = $(this);
+		const img = e.querySelector('img.gov-form-control__password-icon');
+		const inp = e.parentElement.querySelector('input');
+		let isPwd = false;
+		if (inp) {
+			isPwd = inp.type === 'password';
+			inp.type = isPwd ? 'text' : 'password';
+		}
+		if (img) {
+			img.src = 'https://nia.identita.gov.cz/ipsts.sms/' + (isPwd ? '/images/eye-crossed-error.svg' : '/images/eye.svg');
+		}
+		return false;
+	}
+</script>
+
+<div id="event_main_container">
+	<div id="event_container" class="container">
+
+
+
+
+
+<script type="text/javascript" nonce="gg">
+    var otp = { regEx: /[^0-9\-]/, separ: '-', grpCount: 0, grpLen: 0};
+
+
+    var errorCode = "0";
+
+    function ResendSmsCountdown() {
+        if (document.sms_timer) {
+            clearInterval(document.sms_timer);
+            document.sms_timer = null;
+        }
+
+        var sec = 60;
+        const c = document.getElementById('countdown');
+		$("#lnkResendSms, a[id=btnCont2Sms]").addClass("gov-disable-btn");
+		document.sms_timer = setInterval(function () {
+            sec--;
+            c.textContent = sec;
+            if (sec == 0) {
+                clearInterval(document.sms_timer);
+				document.sms_timer = null;
+				$("#lnkResendSms, a[id=btnCont2Sms]").removeClass("gov-disable-btn");
+				$(".gov-small-alert").hide();
+            }
+        }, 1000);
+    }
+
+</script>
+
+    <div class="container-dialog-712">
+        <h2 class="mt-40 mb-32">Přihlášení pomocí <b>NIA ID</b></h2>
+    </div>
+
+<div class="container-dialog-712">
+<form action="https://nia.identita.gov.cz/ipsts.sms/ui/viewpostback/14cb153a28cd469bbc2fe0014791ce12" class="needs-validation" id="uidpwdLogin_form" method="post" novalidate="" role="form"><input data-val="true" data-val-required="The NextStepName field is required." id="NextStepName" name="NextStepName" type="hidden" value="" /><input id="stsEventResponse_EventAction" name="stsEventResponse.EventAction" type="hidden" value="None" /><input id="CurrentCulture" name="CurrentCulture" type="hidden" value="cs-CZ" />        <div class="form-floating center-340 mb-3">
+<input class="form-control needs-validation" id="stsEventResponse_UserName" name="stsEventResponse.UserName" placeholder="U&#x17E;ivatelsk&#xE9; jm&#xE9;no" Required="" type="text" value="" />            <label for="stsEventResponse_UserName">U&#x17E;ivatelsk&#xE9; jm&#xE9;no</label>
+            <div class="invalid-feedback text-start">Je potřeba zadat uživatelské jméno, které jste si zvolili v průběhu registrace. <a class="clearfix gg-textlinks popupForgottenUserShowBtn" href="#">Nepamatujete si své uživatelské jméno?</a></div>
+        </div>
+        <div class="form-floating center-340 mb-3">
+<input class="form-control needs-validation" id="stsEventResponse_Password" name="stsEventResponse.Password" placeholder="Heslo" required="" type="password" value="" />                    <button type="button" aria-label="Skrýt heslo" title="Skrýt heslo" class="gov-form-control__password-icon--button" tabindex="-1">
+                        <img src="../../images/eye.svg" class="gov-form-control__password-icon" alt="oko" width="25" height="25">
+                    </button>
+            <label for="stsEventResponse_Password">Heslo</label>
+            <div class="invalid-feedback text-start">Je potřeba zadat údaj <b>heslo</b></div>
+        </div>
+                <div class="form-floating center-340 mt-4">
+                    <button id="btnLoginSms" class="btn btn-primary gov-button mt-2 mb-4" title="Přihlásit se a zaslat SMS kód na telefon">
+                        Poslat SMS kód
+                    </button>
+                </div>
+        <hr class="mt-4 max400" />
+        <div class="form-floating mt-4 mb-40">
+                <div class="mt-2">
+                    <a id="lnkForgotPassword" class="clearfix gg-textlinks" href="#">Zapomenuté heslo</a>
+                </div>
+
+
+<script type="text/javascript" nonce="gg">
+    $(document).ready(function () {
+        $("#closeModalBtn").on("click", function () {			
+            $('#popupForgottenUser').removeClass("show d-block");
+			$('#popupForgottenUser').addClass("d-none");
+        });
+    });
+</script>
+
+<div id="popupForgottenUser" role="dialog" aria-modal="true" class="modal d-none" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title h4">
+					<h2 class="gov-title ms-3">Zapomenuté uživatelské jméno</h2>
+				</div>
+				<button id="closeModalBtn" type="button" class="close close-btn" data-dismiss="modal" aria-label="Zavřít"><span aria-hidden="true">×</span></button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-text text-start mt-3 ms-3">Uživatelské jméno jste zadávali v průběhu registrace vašeho NIA ID.</p>
+				<p class="modal-text text-start ms-3">Pokud si na něj nemůžete vzpomenout, kontaktujte pro jeho zjištění Service Desk Digitální a informační agentury na telefonním čísle <a class="phoneNumberLnk" href="tel:+420227023444">+420 227 023 444</a> nebo na e-mailu <a href="mailto:identitaobcana@dia.gov.cz">identitaobcana@dia.gov.cz</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+                <div class="mt-2">
+                    <a class="clearfix gg-textlinks popupForgottenUserShowBtn" href="#">Zapomenuté uživatelské jméno</a>
+                </div>
+                <div class="mt-2">
+                    <a class="clearfix gg-textlinks" href="https://www.identita.gov.cz/registrace/nia-id">Založit NIA ID</a>
+                </div>
+        </div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8PoLAiNA6HFPlixEAqVBBTjVM8nHpOet5it590UkAIwAVZ00-qnnpw3AvxV5okctUzO4h9JAhrMCE5V_UFli7i6TrUeL0sgBQ03sOzOq8M_mfbkTb1beQUY9WfzjxntDXb4oag6J3s0rYH7CURbavWM" /></form></div>
+	</div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <footer class="gov-container u-bg-color--grey-dark gov-footer">
+
+                <div class="gov-container__content">
+                    <section class="gov-footer__upper">
+                        <div class="gov-footer__col">
+                            <h3 class="gov-footer__headline">Mohlo by se hodit</h3>
+
+                            <ul class="gov-list--plain">
+
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://info.identita.gov.cz/sep/" target="_blank">Seznam kvalifikovaných poskytovatelů</a>
+                                </li>
+
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://info.identita.gov.cz/KvalifikovaniSpravci.aspx" target="_blank">Seznam kvalifikovaných správců</a>
+                                </li>
+
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://overeni.identita.gov.cz/" target="_blank">Ověřovací portál</a>
+                                </li>
+
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://www.identita.gov.cz/Autorizace/OvereniUkonu" target="_blank">Ověření autorizace úkonu</a>
+                                </li>
+
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://gov.cz/" target="_blank">GOV.CZ</a>
+                                </li>
+
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://www.szrcr.cz/" target="_blank">Správa základních registrů</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gov-footer__col">
+                            <h3 class="gov-footer__headline">Informace</h3>
+
+                            <ul class="gov-list--plain">
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://www.identita.gov.cz/Info/Accessibility" target="_blank">Prohlášení o přístupnosti</a>
+                                </li>
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://info.identita.gov.cz/cookies/" target="_blank">Zpracování osobních údajů a cookies</a>
+                                </li>
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="https://info.identita.gov.cz/" target="_blank">Informační web identity občana</a>
+                                </li>
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="../../../../info.identita.gov.cz/download/PriruckaUzivatelePortalu.pdf" target="_blank">Uživatelská příručka</a>
+                                </li>
+                                <li>
+                                    <a class="gov-link  gov-link--standalone  gov-link--inversed " href="../../../../info.identita.gov.cz/download/SeP_PriruckaKvalifikovanehoPoskytovatele.pdf" target="_blank">Příručka pro kvalifikované poskytovatele</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gov-footer__col">
+                            <h3 class="gov-footer__headline">Máte dotaz? Napište nám</h3>
+
+                            <ul class="gov-list--plain">
+                                <li>
+                                    <span class="gov-link--inversed gov-icon gov-icon--16x16 gov-simple-icon--email">
+                                        <a id="emailAddressLnk" title="Zkopírovat do schránky">
+                                            identitaobcana@dia.gov.cz
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="gov-link--inversed gov-icon gov-icon--16x16 gov-simple-icon--phone">
+                                        <a id="phoneNumberLnk" title="Zkopírovat do schránky" href="tel:+420227023444">
+                                            +420 227 023 444
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <h3 class="gov-footer__headline">Pořiďte si Mobilní klíč eGovernmentu</h3>
+
+                            <div class="container">
+                                <div class="row gov-flexbox">
+                                    <div class="col">
+                                        <a href='https://play.google.com/store/apps/details?id=cz.mojedatovaschranka.mobilniklic&amp;pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' class="app-icon" ><img alt='Nyní na Google Play' src='../../../../play.google.com/intl/en_us/badges/static/images/badges/cs_badge_web_generic.png' width="133" height="51" /></a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="https://apps.apple.com/us/app/mobilní-klíč-egovernmentu/id1466762017?itsct=apps_box_badge&amp;itscg=30200" class="app-icon"><img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/cs-cz?size=133x51&amp;releaseDate=1564185600" alt="Download on the App Store"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="">
+
+                    <section class="gov-footer__lower">
+                        <p class="gov-footnote">
+                            2023 © Digitální a informační agentura • Informace jsou poskytovány v&nbsp;souladu se zákonem č.&nbsp;106/1999 Sb., o&nbsp;svobodném přístupu k&nbsp;informacím.
+                        </p>
+
+                        <p class="gov-footnote">
+                            Verze 1.0.0
+                        </p>
+                    </section>
+
+                    <button class="gov-button gov-button--primary-outlined gov-button--inversed gov-footer__scroll-up gov-js--scroll-up u-bg-color--grey-dark" aria-labelledby="fo-scrollBtn">
+                        <span id="fo-scrollBtn" class="u-sr-only gov-button__label">
+                            Zpět nahoru
+                        </span>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+<!-- Mirrored from nia.identita.gov.cz/ipsts.sms/UI/Login/14cb153a28cd469bbc2fe0014791ce12 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Mar 2026 15:37:20 GMT -->
+</html>
