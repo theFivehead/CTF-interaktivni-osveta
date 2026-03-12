@@ -1,0 +1,13 @@
+Dobrý den,
+
+Potřeboval bych, aby jste vyplnil formulář o svých úspěších ve firmě za posledních 5 let. 
+
+Výsledky následně půjdou generálnímu řediteli, aby věděl ve které části firmy má začít propouštět.
+Vyplnění dotazníku celkem spěchá, protože došlo k neočekávanému výkyvu na trzích a vedení potřebuje rozhodnout co nejrychleji.
+
+Dotazník je v excelu (v příloze) a potřebuji, abyste povolil spouštění maker, protože data se po vyplnění automaticky odešlou přímo řediteli.
+
+Přeji hezký
+R. Romanovský
+Oddělení HR
+
