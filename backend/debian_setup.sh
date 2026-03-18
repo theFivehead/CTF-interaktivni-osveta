@@ -34,7 +34,7 @@ mkdir transfer
 
 cd ~
 
-cp nginx_stranky//* /et
+cp nginx_stranky/chatting_website /var/www/chatter
 
 cp data/nginx_conf/*  /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
