@@ -36,6 +36,5 @@ cd ~
 
 cp nginx_stranky/* /var/www/
 
-
 cp data/nginx_conf/*  /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/

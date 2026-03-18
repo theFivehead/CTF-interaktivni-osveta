@@ -1,3 +1,0 @@
-swaks --to victim@local.test --server localhost:1025 --data @prince.txt 
-swaks --to victim@local.test --server localhost:1025 --data @typosquatting.txt 
-swaks --to victim@local.test --server localhost:1025 --from rromanovsky@outlook.com --header "From: Radim Romanovský <rromanovsky@outlook.com>" --body @macro.txt --h-Subject 'Vyplnění dotazníku' --attach dotaznik.ods
