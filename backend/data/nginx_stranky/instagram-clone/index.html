@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="tooltip.css">
   </head>
 
   <body>
@@ -602,9 +603,9 @@
                   />
                 </div>
               </div>
-
+              
               <div class="post__footer">
-                <div class="post__buttons">
+                <div class="post__buttons ">
                   <button class="post__button">
                     <svg
                       width="24"
@@ -659,8 +660,8 @@
                   </button>
 
                   <div class="post__indicators"></div>
-
-                  <button class="post__button post__button--align-right">
+                  <!-- button edit -->
+                  <button data-clipboard-text="https://yourlink.com/share" class="post__button post__button--align-right share">
                     <svg
                       width="24"
                       height="24"
@@ -1552,5 +1553,27 @@
         </div>
       </button>
     </nav>
+    <script src="clipboard.min.js"></script>
+    <script>
+    var clipboard = new ClipboardJS('.share');
+
+      clipboard.on('success', function (e) {
+        const button = e.trigger;
+        button.classList.add('show-tooltip');
+        setTimeout(() => {
+        button.classList.remove('show-tooltip');
+  }, 2000);
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        console.log(e);
+      });
+
+      clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+      });
+    </script>
   </body>
 </html>
