@@ -1,0 +1,32 @@
+
+h2{
+    font-size: 38px;
+}
+
+.box { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    width: 75%; 
+}
+input { width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; border-radius: 5px;
+    box-sizing: border-box; 
+}
+button { 
+    width: 100%; 
+    padding: 10px;
+    background: #007aff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;}
+button:hover { background: #005bb5; }
+.msg { margin-bottom: 15px; font-size: 14px; line-height: 1.4; }
+.rules { font-size: 18px; color: #666; margin-bottom: 2px; }
+
+li{
+    font-size: 18px; color: #666; margin-bottom: 0px; 
+}
+ol{
+    margin: 2px;
+}

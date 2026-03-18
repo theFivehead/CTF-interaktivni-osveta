@@ -1,0 +1,56 @@
+{
+  "domain_name": "test.ua",
+  "status": [
+    "clientDeleteProhibited",
+    "clientTransferProhibited",
+    "ok",
+    "linked"
+  ],
+  "registrar": "ТОВ \"НІК.ЮЕЙ\"",
+  "registrar_name": "ua.nic",
+  "registrar_url": "http://nic.ua",
+  "registrar_country": "UA",
+  "registrar_city": "Dnipro",
+  "registrar_address": "PO box 9, Dnipro, 49000, Ukraine",
+  "registrar_email": "abuse@nic.ua",
+  "registrant_name": "ТОВ \"НІК.ЮЕЙ\"",
+  "registrant_country": "UA",
+  "registrant_city": null,
+  "registrant_state": "Dnipro",
+  "registrant_address": "Plehanova 18 512",
+  "registrant_email": "uanic@nic.ua",
+  "registrant_postal_code": "49000",
+  "registrant_phone": "+380.445933222",
+  "registrant_fax": "+380.445937569",
+  "admin": "ТОВ \"НІК.ЮЕЙ\"",
+  "admin_country": "UA",
+  "admin_city": null,
+  "admin_state": "Dnipro",
+  "admin_address": "Plehanova 18 512",
+  "admin_email": "uanic@nic.ua",
+  "admin_postal_code": "49000",
+  "admin_phone": "+380.445933222",
+  "admin_fax": "+380.445937569",
+  "updated_date": [
+    "2025-09-29 17:20:06+03:00",
+    "2019-08-31 22:09:32+03:00",
+    "2019-08-31 22:07:53+03:00",
+    "2025-09-18 09:57:55+03:00"
+  ],
+  "creation_date": [
+    "2007-10-04 13:40:19+03:00",
+    "2014-03-31 17:30:46+03:00",
+    "2014-03-31 17:08:46+03:00",
+    "2003-01-08 00:00:00+02:00"
+  ],
+  "expiration_date": "2030-10-04 13:40:18+03:00",
+  "name_servers": [
+    "ns1.uadns.com",
+    "ns2.uadns.com"
+  ],
+  "emails": [
+    "abuse@nic.ua",
+    "uanic@nic.ua",
+    "support@nic.ua"
+  ]
+}

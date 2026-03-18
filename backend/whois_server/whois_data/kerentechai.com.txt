@@ -1,0 +1,50 @@
+{
+  "domain_name": "kerentechai.com",
+  "status": [
+    "clientDeleteProhibited",
+    "clientTransferProhibited",
+    "ok"
+  ],
+  "whois_server": "whois.namecheap.com",
+  "registrar": "NAMECHEAP INC",
+  "registrar_name": "NAMECHEAP INC",
+  "registrar_url": "http://www.namecheap.com",
+  "registrar_country": "IS",
+  "registrar_city": "Reykjavik",
+  "registrar_address": "Kalkofnsvegur 2",
+  "registrar_email": "abuse@namecheap.com",
+  "registrant_name": "Viktor Savych Tymchenko",
+  "registrant_country": "UA",
+  "registrant_city": Kyjev,
+  "registrant_state": "Kyjev",
+  "registrant_address": "Rybalska 9",
+  "registrant_email": "kerentechai@gmail.com",
+  "registrant_postal_code": "02000",
+  "registrant_phone": "+380.441938269",
+  "registrant_fax": "+380.445487319",
+  "admin": "Viktor Savych Tymchenko",
+  "admin_country": "UA",
+  "admin_city": Kyjev,
+  "admin_state": "Kyjev",
+  "admin_address": "Rybalska 9",
+  "admin_email": "kerentechai@gmail.com",
+  "admin_postal_code": "02000",
+  "admin_phone": "+380.441938269",
+  "admin_fax": "+380.445487319",
+  "updated_date": [
+    "2026-02-26 11:13:19+00:00",
+    "0001-01-01 00:00:00+00:00",
+  ],
+  "creation_date": [
+    "2026-02-26 11:13:04+00:00",
+  ],
+  "expiration_date": "2027-02-26 11:13:04+00:00",
+  "name_servers": [
+    "ALEENA.NS.CLOUDFLARE.COM",
+    "ELIAS.NS.CLOUDFLARE.COM"
+  ],
+  "emails": [
+    "abuse@namecheap.com",
+    "kerentechai@gmail.com",
+  ]
+}

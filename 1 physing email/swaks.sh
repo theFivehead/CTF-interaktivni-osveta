@@ -1,0 +1,1 @@
+/home/marek/Dokumenty/VUT/IC1/projekt/backend/send_mails.sh
