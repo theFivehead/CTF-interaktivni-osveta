@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient12">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop12" />
+      <stop
+         style="stop-color:#919191;stop-opacity:1;"
+         offset="1"
+         id="stop13" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4">
+      <stop
+         style="stop-color:#fe2e00;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#f13900;stop-opacity:0;"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#linearGradient4"
+       id="radialGradient6"
+       cx="24"
+       cy="24"
+       fx="24"
+       fy="24"
+       r="13.916042"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1060432,0,0,1.1060432,-2.5450362,-2.5450362)" />
+    <linearGradient
+       xlink:href="#linearGradient12"
+       id="linearGradient13"
+       x1="7.0294375"
+       y1="40.970562"
+       x2="40.970558"
+       y2="7.0294385"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     style="fill:url(#linearGradient13);fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-dasharray:none"
+     id="rect6"
+     width="48"
+     height="48"
+     x="0"
+     y="0"
+     ry="9.2641239" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#fefefe;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2"
+       width="38.161991"
+       height="38.161991"
+       x="4.9190035"
+       y="4.9190035"
+       ry="9.2641239" />
+    <circle
+       style="fill:url(#radialGradient6);fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path4"
+       cx="24"
+       cy="24"
+       r="15.391744" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.8;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path2"
+       cx="24"
+       cy="24"
+       r="7.6455903" />
+    <circle
+       style="fill:#f0f82f;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path3"
+       cx="24"
+       cy="24"
+       r="1.1689023" />
+  </g>
+</svg>

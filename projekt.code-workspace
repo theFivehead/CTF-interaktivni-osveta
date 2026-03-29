@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../../opt/lampp/htdocs"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "htdocs"
+	}
+}

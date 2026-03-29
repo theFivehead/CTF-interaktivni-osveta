@@ -1,0 +1,14 @@
+0:Ahoj Kláro! Narazil jsem na tvůj profil a musel jsem ti napsat. Ta fotka ze štítu je neskutečná. To jsou Tatry? 😊
+1:Ahoj Tome! Moc díky. Trefa do černého, jsou to Rysy. Ty taky rád chodíš po horách?
+0:Rozhodně. I když naposledy jsem spíš lezl na stěně než zdolával vrcholy. Ale výhledům z hor se nic nevyrovná.
+1:Bouldering, nebo s lanem? Vždycky mě to lákalo, ale mám pocit, že bych se neudržela ani vteřinu. 😅
+0:Bouldering! Vůbec se toho neboj, je to mnohem víc o nohách a technice, než o hrubé síle. Klidně ti to někdy ukážu.
+1:Beru tě za slovo! Třeba objevím skrytý talent.
+0:To věřím.
+0:Máš doma psa?🐶 Já mám doma Rexe. Vždycky mě nutí chodit ven.
+1:Jo mám, ale tomu se nechce moc chodit ven.
+0:Jak se Jmenuje?
+1:Diana, ale je docela líná a moc se jí nikam nechce.
+0:haha to je jako můj strejda
+0:chodíš ráda ven
+

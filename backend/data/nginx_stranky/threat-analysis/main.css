@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Datatype:wdth,wght@87.5,100..900&display=swap');
+
+body{
+--color-ops-bg: #0a0f1a;
+--color-ops-surface: #111827;
+--color-ops-border: #1e2a3a;
+--color-ops-green: #0f8;
+--color-ops-amber: #ffb800;
+--color-ops-red: #f34;
+--color-ops-blue: #3b82f6;
+--color-ops-text: #f1f5f9;
+--color-ops-muted: #94a3b8;
+--animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+--animate-blink: blink 1.5s step-end infinite;
+background-color: var(--color-ops-bg);
+color: var(--color-ops-green);
+font-family: Datatype sans-serif;
+display: flex;
+flex-direction: column;
+}
+.success{
+    box-shadow: 0 0 40px 10px var(--color-ops-green);
+    font-size: 38px;
+    text-align: center;
+}
+.fail{
+box-shadow: 0 0 40px 10px var(--color-ops-red);
+}
+h1{
+    margin: 10px auto 20px;
+}
+form{
+display: flex;
+flex-direction: column;
+}
+button[type="submit"]{
+    width: 130px;
+    height: 45px;
+    margin: 20px auto 0 auto;
+    color: var(--color-ops-text);
+    background-color: var(--color-ops-surface);
+    font-size: 20px;
+    border-radius: 0.75rem;
+      border: 1px solid var(--color-ops-border);
+}
+button:active{
+    outline: 2.5px inset var(--color-ops-green) !important;
+}
+textarea{
+    color: var(--color-ops-text);
+    border-color: var(--color-ops-amber);
+    background-color: var(--color-ops-border);
+    background-color: var(--color-ops-surface);
+  border: 1px solid var(--color-ops-border);
+  border-radius: .75rem;
+   box-shadow: 0 0 40px 10px var(--color-ops-amber);
+   transition: outline 2s;
+   transition: box-shadow 2s;
+ outline: none !important;
+ margin: 20px auto;
+ width: 75%;
+ font-family: Datatype sans-serif;
+ font-size: 1.1em;
+}
+textarea:focus{
+    outline: 2px groove var(--color-ops-amber) !important;
+    /*border: 1px solid ;
+    box-shadow: 0 0 50px 15px var(--color-ops-red);*/
+}
+
+canvas {
+    background-color: var(--color-ops-bg);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

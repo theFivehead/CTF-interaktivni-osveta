@@ -1,0 +1,11 @@
+1:Ahoj tati zítra přijedu domů
+0:ok
+1:Bude doma něco na jídlo
+0:👍
+1:Už jsi zpravil, tu rozbitou poličku v kuchyni?
+0:👍
+0:Slyšela jsi ten vtip o slonovi ve výtahu?
+1:Ne
+0:Já taky ne. Šel jsem po schodech.
+1:😐
+0:ok
