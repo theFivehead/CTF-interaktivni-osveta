@@ -169,3 +169,22 @@ postsContent.forEach((post) => {
     }
   }
 });
+
+
+function dogFetch(){
+  dog_images=document.getElementsByClassName("woof");
+  for(let i=-1;i<dog_images.length;i++){
+    fetch('https://random.dog/woof.json')
+      .then(response => response.json())
+      .then(data => {
+        if(data.url.endsWith('.mp4')){
+            return dogFetch();
+        }
+        dog_images[i].src=data.url;
+        console.log(data.url); // URL of the random dog image
+      })
+      .catch(error => console.error('Error fetching dog image:', error));
+  }
+}
+
+dogFetch();
