@@ -37,11 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 <div class="box">
-        <?php
+<?php
+//pokud uživatel provede všechny úkoly a přihlásí se s novým heslem získá vlajku a odešle se email pro další úkol a zamkne se vytořením souboru z sha512(odeslat email)
     if(isset($_SESSION['splneno']) && $_SESSION['splneno']){ //pokud uživatel vypočítal příklady a přihlásil se s novým heslem tak získá vlajku a odešle se email pro další úkol a zamkne se vytořením souboru z sha512(odeslat email)
         $lock="047c6e49b828def68eae630d9ed9bdcc614070865988cd5e4b6efb6330bdd7ae99e5810e61740f41e5b5c00271dd2743800e1853354d6c3f897d540a0901c3b5";
         if(!file_exists($lock)){
-            exec("swaks"); //TODO
+            exec("swaks --to victim@local.test --server localhost:1025 --data @spear.txt "); //TODO
             file_put_contents($lock, "locked");
         }
         echo '<h2>Gratulujeme, získali jste vlajku!</h2>';
@@ -51,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else{
          echo '        
             <form method="POST">';
-    if(isset($_SESSION['new_password']) && !$_SESSION['priklady_vypocteny']){ //pokud je heslo nastaveno tak uživatel vypočte 6 příkladu a získá vlajku
+    if(isset($_SESSION['new_password']) && !$_SESSION['priklady_vypocteny']){ //pokud je heslo nastaveno tak uživatel vypočte x příkladu a získá vlajku
         if(!isset($_SESSION['vysledky']) || !isset($_SESSION['priklady'])){
             $_SESSION['vysledky']=array_fill(0, 6, 0);
                     for($i=0; $i<5; $i++){
