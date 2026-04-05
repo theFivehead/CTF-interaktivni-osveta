@@ -1,0 +1,2 @@
+ povolot spouštění skriptů
+ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned 

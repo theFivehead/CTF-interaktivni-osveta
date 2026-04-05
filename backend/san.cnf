@@ -1,0 +1,17 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+x509_extensions = v3_req
+prompt = no
+
+[req_distinguished_name]
+C = US
+O = Let's Encrypt
+CN = obcanportalgov.cz
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = obcanportalgov.cz
+DNS.2 = novinky-aktualne.autos
