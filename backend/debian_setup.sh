@@ -1,7 +1,7 @@
 !#/bin/bash
 export HOME=$(pwd)
 apt update -y && sudo apt upgrade -y
-apt install -y python3 dnsmasq nginx php8.*-fpm ca-certificates bind9 bind9utils curl swaks nginx openssl
+apt install -y python3 dnsmasq nginx php8.*-fpm ca-certificates curl swaks nginx openssl
 # Add Docker's official GPG key:
 #docker install
 install -m 0755 -d /etc/apt/keyrings
