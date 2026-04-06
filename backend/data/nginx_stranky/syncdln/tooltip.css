@@ -1,0 +1,39 @@
+.share {
+  position: relative; /* Required for the tooltip positioning */
+    margin: auto;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* The Tooltip Bubble */
+.share::after {
+  content: 'Copied!';
+  position: absolute;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevents the tooltip from being clickable */
+}
+
+/* Show the tooltip when this class is present */
+.share.show-tooltip::after {
+  opacity: 1;
+}
+
+.share img{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
