@@ -1,58 +1,3 @@
-
-
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <title>Změna hesla</title>
-    <link rel="stylesheet" href="main.css">
-     <link rel="stylesheet" href="login.css">
-</head>
-<body>
-    <div class="box">
-        <h2>Změna hesla</h2>
-        <p class="rules">
-            Heslo musí mít: 
-            <ol>
-                <li>min. 10 znaků</li>
-                <li>velké i malé písmeno</li>
-                <li>číslo nebo speciální znak</li>
-                <li>nesmí být ve slovníku známých hesel</li>
-                <li><a href="https://jecas.cz/bezpecne-heslo#entropie">entropie</a> musí přesáhnout 60</li>
-            </ol>
-        </p>
-        
-        <?php if ($message): ?>
-            <div class="msg"><?php echo $message; ?></div>
-        <?php endif; ?>
-
-        <form method="POST">
-            <input type="password" name="new_password" placeholder="Nové heslo" required>
-            <input type="password" name="confirm_password" placeholder="Potvrzení hesla" required>
-            <button type="submit">Změnit heslo</button>
-        </form>
-        
-        <br>
-        <a href="index.php" style="font-size: 12px; color: #007aff; text-decoration: none;">Zpět</a>
-    </div>
-    <script>
-        // Po úspěšné změně hesla spustíme odpočítávání
-        const countdownElement = document.getElementsByClassName('countdown')[0];
-        if (countdownElement) {
-            let countdown = 10;
-            const interval = setInterval(() => {
-                countdown--;
-                countdownElement.textContent = countdown;
-                if (countdown <= 0) {
-                    clearInterval(interval);
-                    window.location.href = 'index.php?logout=1'; // Odhlásí uživatele a přesměruje na login
-                }
-            }, 1000);
-        }
-    </script>
-</body>
-</html>
-
 <?php
 session_start();
 
@@ -123,8 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         /*$password_file=base64_encode(random_bytes(8))+'.txt';
                     fwrite($password_file, $new_password); // Uložíme nové heslo do textového souboru (pro účely CTF)*/
         $_SESSION['new_password'] = $new_password; // Uložíme nové heslo do session, aby se dalo zkontrolovat při přihlášení
-        sleep(10); //odhlásí uživatele po 10 sekundách
-        logout();
+        //sleep(10); //odhlásí uživatele po 10 sekundách
+        //logout();
 
     } else {
         $message = "<p style='color:red;'>" . implode("<br>", $errors) . "</p>";
@@ -132,3 +77,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 ?>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Změna hesla</title>
+    <link rel="stylesheet" href="main.css">
+     <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="box">
+        <h2>Změna hesla</h2>
+        <p class="rules">
+            Heslo musí mít: 
+            <ol>
+                <li>min. 10 znaků</li>
+                <li>velké i malé písmeno</li>
+                <li>číslo nebo speciální znak</li>
+                <li>nesmí být ve slovníku známých hesel</li>
+                <li><a href="https://jecas.cz/bezpecne-heslo#entropie">entropie</a> musí přesáhnout 60</li>
+            </ol>
+        </p>
+        
+        <?php if ($message): ?>
+            <div class="msg"><?php echo $message; ?></div>
+        <?php endif; ?>
+
+        <form method="POST">
+            <input type="password" name="new_password" placeholder="Nové heslo" required>
+            <input type="password" name="confirm_password" placeholder="Potvrzení hesla" required>
+            <button type="submit">Změnit heslo</button>
+        </form>
+        
+        <br>
+        <a href="index.php" style="font-size: 12px; color: #007aff; text-decoration: none;">Zpět</a>
+    </div>
+    <script>
+        // Po úspěšné změně hesla spustíme odpočítávání
+        const countdownElement = document.getElementsByClassName('countdown')[0];
+        if (countdownElement) {
+            let countdown = 8; // Počet sekund do odhlášení
+            const interval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(interval);
+                    window.location.href = 'index.php?logout=1'; // Odhlásí uživatele a přesměruje na login
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
