@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -116,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Po úspěšné změně hesla spustíme odpočítávání
         const countdownElement = document.getElementsByClassName('countdown')[0];
         if (countdownElement) {
-            let countdown = 8; // Počet sekund do odhlášení
+            let countdown = 5; // Počet sekund do odhlášení
             const interval = setInterval(() => {
                 countdown--;
                 countdownElement.textContent = countdown;

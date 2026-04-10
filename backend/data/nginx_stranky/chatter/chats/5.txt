@@ -1,0 +1,18 @@
+0: Hello dear, how are you today? I saw your profile and felt a special connection.
+1: Ahoj, to zní hodně rychle 😄 odkud jsi?
+0: I am from India but currently working abroad. You seem very kind and honest.
+1: To říkáš každé, nebo mám být výjimečná? 😄
+0: No no, you are truly special. I want serious relationship with you.
+1: Zajímavý, ani nevíš jak vypadám normálně bez filtru
+
+0: Beauty is in heart. I trust you already.
+1: To bys možná neměl 😄
+
+0: Can I ask small favor? I have problem with my bank, I need help to receive money.
+1: Aha, tak tady to začíná být zajímavý
+
+0: Just temporary, I will send back double.
+1: Jasně… a já jsem královna Anglie
+
+0: Why you don’t trust me?
+1: Protože tohle je textbook scam 🙂 Měj se

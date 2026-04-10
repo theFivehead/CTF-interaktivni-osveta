@@ -48,7 +48,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                     <img class="avatar" src="avatars/horst.jpg" alt="Horst Fuchs">
                     <div class="chat-info">
                         <h3>Horst Fuchs</h3>
-                        <p>Nejlepší kamarád</p>
+                        <p>marketing</p>
                     </div>
                 </div>
                 </div>
@@ -56,10 +56,10 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
             <a href="chat.php?id=2" class="chat-link">
                 <div class="chat-wrapper">
                 <div class="chat-item">
-                    <div class="avatar">T</div>
+                    <div class="avatar">M</div>
                     <div class="chat-info">
                         <h3>Máma</h3>
-                        <p>Nejlepší kamarád</p>
+                        <p>Super máma</p>
                     </div>
                 </div>
                 </div>
@@ -69,8 +69,30 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                 <div class="chat-item">
                     <div class="avatar">T</div>
                     <div class="chat-info">
-                        <h3>Otec</h3>
-                        <p>Nejlepší kamarád</p>
+                        <h3>Táta</h3>
+                        <p>Nejlepší táta</p>
+                    </div>
+                </div>
+                </div>
+            </a>
+            <a href="chat.php?id=4" class="chat-link">
+                <div class="chat-wrapper">
+                <div class="chat-item">
+                    <div class="avatar">L</div>
+                    <div class="chat-info">
+                        <h3>Lucie</h3>
+                        <p>Kamoška</p>
+                    </div>
+                </div>
+                </div>
+            </a>
+            <a href="chat.php?id=5" class="chat-link">
+                <div class="chat-wrapper">
+                <div class="chat-item">
+                    <div class="avatar">I</div>
+                    <div class="chat-info">
+                        <h3>idk</h3>
+                        <p>sus člověk</p>
                     </div>
                 </div>
                 </div>

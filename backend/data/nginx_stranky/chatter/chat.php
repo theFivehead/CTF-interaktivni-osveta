@@ -4,6 +4,11 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     header("Location: index.php");
     exit;
 }
+$uzivatel=array(array("avatar"=>"T","jmeno"=>"Tomáš 🧗‍♂️","status"=>"Offline"),
+array("avatar"=>"avatars/horst.jpg","jmeno"=>"Horst Fuchs","status"=>"Offline"),
+array("avatar"=>"M","jmeno"=>"Máma","status"=>"Offline"),
+array("avatar"=>"L","jmeno"=>"Lucie","status"=>"Online"),
+array("avatar"=>"I","jmeno"=>"idka","status"=>"Online"));
 ?>
 <!DOCTYPE html>
 <html lang="cs">
@@ -11,7 +16,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="chat.css">
-    <title>Chat - Tomáš</title>
+    <title><?php echo "Chat - ".$uzivatel[$_GET['id']]["jmeno"]; ?></title>
 </head>
 
 <body>
@@ -20,7 +25,7 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <div class="chat-header">
         <a href="index.php" class="back-btn">‹</a>
         <?php
-        $uzivatel=array(array("avatar"=>"T","jmeno"=>"Tomáš 🧗‍♂️","status"=>"Online"),array("avatar"=>"avatars/horst.jpg","jmeno"=>"Horst Fuchs","status"=>"Offline"),array("avatar"=>"M","jmeno"=>"Máma","status"=>"Offline"));
+        
         if(file_exists($uzivatel[$_GET['id']]["avatar"])){
             echo '<img class="avatar" src="'.$uzivatel[$_GET['id']]["avatar"].'">';
         } else {
