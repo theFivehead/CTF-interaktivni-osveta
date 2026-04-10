@@ -1,2 +1,7 @@
- povolot spouštění skriptů
- Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned 
+povolit spouštění skriptů
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+Nainstalovat wsl2 debian
+Uvnitr spustit skript debian_setup.sh
+Spustit skript install_cert.ps1
+V plánovači úloh nastavit spouštění wsl_start.ps1, pokud se uživatel přihláší a opakovat co 5 minut v délce 1 dne.
+Vytvořit uživatele se zakladnímy oprávněnímy
