@@ -1,9 +1,9 @@
-!#/bin/bash
+#!/bin/bash
 #nastaví dns resolver pro wsl a zakáže generování resolv.conf, aby se neztratily nastavení nameserveru
 echo "generateResolvConf = false" | tee -a /etc/wsl.conf
 echo "nameserver 9.9.9.9" | tee /etc/resolv.conf
 #nainstaluje potřebné balíčky, včetně dockeru
-apt update -y && sudo apt upgrade -y
+apt update -y && apt upgrade -y
 apt install -y python3 nginx php8.*-fpm ca-certificates curl swaks nginx openssl python3-flask pip coreutils
 # Add Docker's official GPG key:
 #docker install
@@ -62,7 +62,7 @@ nginx -t
 
 sleep 2
 systemctl restart nginx
-sudo apt remove pip
-sudo apt autoremove
+apt remove pip
+apt autoremove
 echo "Setup complete!"
 nohup sleep 100000 &

@@ -2,9 +2,9 @@ import http.server
 import socketserver
 import os
 
-PORT = 667
+PORT = 666
 # Whitelisted files (relative to current directory)
-ALLOWED_FILES = {"Hydra.exe", "Melting.exe","ScreenScrew.exe"}
+ALLOWED_FILES = {"Hydra.exe", "Melting.exe","ScreenScrew.exe","cert.pem"}
 
 class RestrictedHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):

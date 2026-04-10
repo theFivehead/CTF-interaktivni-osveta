@@ -1,0 +1,39 @@
+FROM debian:stable-slim
+RUN mkdir -p /home/ctf
+WORKDIR /home/ctf
+
+COPY data ./data
+COPY emails ./emails
+COPY san.cnf send_mails.sh start.sh ./
+COPY virus_server ./virus_server
+COPY whois_server ./whois_server
+
+RUN chmod +x send_mails.sh
+RUN chmod +x start.sh
+RUN <<EOF
+--mount=target=/var/lib/apt/lists,type=cache,sharing=locked
+--mount=target=/var/cache/apt,type=cache,sharing=locked
+ rm -f /etc/apt/apt.conf.d/docker-clean
+apt-get update -y && apt-get upgrade -y
+apt-get install -y python3 nginx php8.4-fpm ca-certificates curl swaks nginx openssl python3-flask pip coreutils
+EOF
+RUN ls
+RUN export HOME=$(pwd)
+RUN pip3 install python-whois --break-system-packages
+RUN openssl req -x509 -nodes -days 18250 -newkey rsa:6144 -keyout key.pem -out cert.pem -sha256 -config san.cnf
+
+RUN cp cert.pem /etc/ssl/certs/bad_cert.pem && cp key.pem /etc/ssl/private/bad_key.pem
+RUN cp /home/ctf/cert.pem virus_server/cert.pem
+RUN chown www-data:www-data /etc/ssl/certs/bad_cert.pem
+RUN chown www-data:www-data /etc/ssl/private/bad_key.pem
+RUN rm -rfd /var/www/*
+RUN cp -r data/nginx_stranky/* /var/www/
+RUN rm /etc/nginx/sites-available/* && rm /etc/nginx/sites-enabled/*
+RUN cp data/nginx_conf/*  /etc/nginx/sites-available/
+RUN ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
+RUN <<EOF
+apt remove pip
+apt autoremove
+echo "Setup complete!"
+EOF
+ENTRYPOINT ["./start.sh"]

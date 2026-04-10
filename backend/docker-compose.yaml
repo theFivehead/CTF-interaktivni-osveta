@@ -1,0 +1,17 @@
+services:
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"   # Web UI
+  os:
+    image: ctf:release
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+      - "666:666"
+      - "5000:5000"
+    depends_on:
+      - mailhog
+    environment:
+      - EMAIL_TO="victim@gmail.com"
