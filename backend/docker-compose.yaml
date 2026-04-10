@@ -1,9 +1,11 @@
 services:
   mailhog:
+    restart: always
     image: mailhog/mailhog
     ports:
       - "8025:8025"   # Web UI
   os:
+    restart: always
     image: ctf:release
     build: .
     ports:
