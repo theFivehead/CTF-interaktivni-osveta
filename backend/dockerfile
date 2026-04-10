@@ -11,9 +11,6 @@ COPY whois_server ./whois_server
 RUN chmod +x send_mails.sh
 RUN chmod +x start.sh
 RUN <<EOF
---mount=target=/var/lib/apt/lists,type=cache,sharing=locked
---mount=target=/var/cache/apt,type=cache,sharing=locked
- rm -f /etc/apt/apt.conf.d/docker-clean
 apt-get update -y && apt-get upgrade -y
 apt-get install -y python3 nginx php8.4-fpm ca-certificates curl swaks nginx openssl python3-flask pip coreutils
 EOF
@@ -36,4 +33,6 @@ apt remove pip
 apt autoremove
 echo "Setup complete!"
 EOF
+RUN rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*
+RUN rm -rf /home/ctf/data /home/ctf/san.cnf
 ENTRYPOINT ["./start.sh"]
