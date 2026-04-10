@@ -98,9 +98,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if($error){
             echo '<div class="error">' . $error . '</div>';
         }
+        if(!empty($_SESSION['new_password'])){
+            $heslo_placeholder="Zadejte svoje nové heslo";
+        }
+        else{
+            $heslo_placeholder="Heslo z videa";
+        }
         echo '
-            <input type="text" name="username" placeholder="Uživatelské jméno (klara)" required>
-            <input type="password" name="password" placeholder="Heslo (Heslo123!)" required>
+            <input type="text" name="username" placeholder="Uživatelské jméno" required>
+            <input type="password" name="password" placeholder="'.$heslo_placeholder.'" required>
             <button type="submit">Přihlásit se</button>
         ';
     }
