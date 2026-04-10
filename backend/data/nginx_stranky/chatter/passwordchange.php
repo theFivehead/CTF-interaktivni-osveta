@@ -19,14 +19,16 @@ function calculateEntropy($password) {
     if ($pool === 0) return 0;
     return strlen($password) * log($pool, 2);
 }
-function logout(){
-            unset($_SESSION['username']);
+
+if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true){
+        header("Location: login.php");
+    exit;
+}
+else if(isset($_SESSION['new_password'])){//logout
+        unset($_SESSION['username']);
         unset($_SESSION['logged_in']);
         header("Location: login.php");
         exit;
-}
-if(isset($_SESSION['new_password'])){
-logout();
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = $_POST['new_password'] ?? '';
@@ -63,14 +65,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     }
     if (empty($errors)) {
+        $_SESSION['new_password'] = $new_password; // Uložíme nové heslo do session, aby se dalo zkontrolovat při přihlášení
+        session_write_close(); // Uložíme session a zavřeme ji, aby se změny projevily při přesměrování
         // V reálné aplikaci bychom heslo uložili: $hashed = password_hash($new_password, PASSWORD_DEFAULT);
         $message = "<p style='color:green;'>Heslo bylo úspěšně změněno! (Entropie: " . round($entropy) . ")</p>
-                    <p style='color:green;'>Za <span class='countdown'>10</span>s budete odhlášeni. Znovu se přihlašte a získejte flag</p>";
+                    <p style='color:green;'>Za <span class='countdown'>10</span>s budete odhlášeni. Znovu se přihlašte se svým novým heslem a získejte flag</p>";
         /*$password_file=base64_encode(random_bytes(8))+'.txt';
                     fwrite($password_file, $new_password); // Uložíme nové heslo do textového souboru (pro účely CTF)*/
-        $_SESSION['new_password'] = $new_password; // Uložíme nové heslo do session, aby se dalo zkontrolovat při přihlášení
-        //sleep(10); //odhlásí uživatele po 10 sekundách
-        //logout();
 
     } else {
         $message = "<p style='color:red;'>" . implode("<br>", $errors) . "</p>";
@@ -89,6 +90,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="box">
         <h2>Změna hesla</h2>
+        <?php if (!isset($_SESSION['new_password'])){
+        echo '
         <p class="rules">
             Heslo musí mít: 
             <ol>
@@ -98,18 +101,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li>nesmí být ve slovníku známých hesel</li>
                 <li><a href="https://jecas.cz/bezpecne-heslo#entropie">entropie</a> musí přesáhnout 60</li>
             </ol>
-        </p>
+        </p>';
         
-        <?php if ($message): ?>
-            <div class="msg"><?php echo $message; ?></div>
-        <?php endif; ?>
-
+        if ($message){
+             echo '<div class="msg">'.$message.'</div>';
+        }
+        echo '
         <form method="POST">
             <input type="password" name="new_password" placeholder="Nové heslo" required>
             <input type="password" name="confirm_password" placeholder="Potvrzení hesla" required>
             <button type="submit">Změnit heslo</button>
-        </form>
-        
+        </form>';
+        }
+        else{
+            echo '<div class="msg" style="font-size:Large;">'.$message.'</div>';
+        }
+        ?>
+
         <br>
         <a href="index.php" style="font-size: 12px; color: #007aff; text-decoration: none;">Zpět</a>
     </div>
@@ -117,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Po úspěšné změně hesla spustíme odpočítávání
         const countdownElement = document.getElementsByClassName('countdown')[0];
         if (countdownElement) {
-            let countdown = 5; // Počet sekund do odhlášení
+            let countdown = 9; // Počet sekund do odhlášení
             const interval = setInterval(() => {
                 countdown--;
                 countdownElement.textContent = countdown;

@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else{
          echo '        
-            <form method="POST">';
+            <form method="POST" action="">';
     if(isset($_SESSION['new_password']) && !$_SESSION['priklady_vypocteny']){ //pokud je heslo nastaveno tak uživatel vypočte x příkladu a získá vlajku
         if(!isset($_SESSION['vysledky']) || !isset($_SESSION['priklady'])){
             $_SESSION['vysledky']=array_fill(0, 6, 0);
@@ -76,7 +76,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     break;
                 }
             }
-            if(!$_SESSION['priklady_vypocteny']){
+            if($_SESSION['priklady_vypocteny']){
+                header("Location: login.php"); // Přesměrování na přihlášení s novým heslem
+                exit;
+            }
+            else{
                 $spatne=true;
             }
 
@@ -87,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          echo '<p style="color:red;">Některé výsledky jsou špatné, zkuste to znovu.</p>';
         }
         for($i=0; $i<5; $i++){
-            echo $_SESSION['vysledky'][$i];
+            //echo $_SESSION['vysledky'][$i];
             echo $_SESSION['priklady'][$i];
         }
         echo '<button type="submit">Odeslat</button>';

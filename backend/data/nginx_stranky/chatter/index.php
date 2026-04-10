@@ -1,14 +1,22 @@
 <?php
 session_start();
 if (isset($_GET['logout'])) {
-    session_destroy();
+    unset($_SESSION['username']);
+    unset($_SESSION['logged_in']);
     header("Location: login.php");
     exit;
+    //session_destroy();
 }
 
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header("Location: login.php");
+if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true){
+        header("Location: login.php");
     exit;
+}
+else if(isset($_SESSION['new_password'])){//logout
+        unset($_SESSION['username']);
+        unset($_SESSION['logged_in']);
+        header("Location: login.php");
+        exit;
 }
 
 ?>
