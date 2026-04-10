@@ -1,13 +1,16 @@
 <?php
 if(isset($_POST['post_links'])){
+    session_start();
     $links=array_filter(array_map('trim', explode("\n", $_POST['post_links'])));
     if (!file_exists("correct_links.txt")) {
     die("Soubor nebyl nalezen.");
     }
     $correctLinks=file("correct_links.txt",FILE_IGNORE_NEW_LINES);
     $spravne=true;
-    $tolerance=0;
+    $tolerance=2;
     
+    $_SESSION["links"]=$links;
+
     if(count($links)==count($correctLinks)){
         for($i=0,$n=count($links);$i<$n;$i++){
             $sameLink=false;

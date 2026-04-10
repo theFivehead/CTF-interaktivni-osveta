@@ -1,14 +1,25 @@
-0:Ahoj Kláro! Narazil jsem na tvůj profil a musel jsem ti napsat. Ta fotka ze štítu je neskutečná. To jsou Tatry? 😊
-1:Ahoj Tome! Moc díky. Trefa do černého, jsou to Rysy. Ty taky rád chodíš po horách?
-0:Rozhodně. I když naposledy jsem spíš lezl na stěně než zdolával vrcholy. Ale výhledům z hor se nic nevyrovná.
-1:Bouldering, nebo s lanem? Vždycky mě to lákalo, ale mám pocit, že bych se neudržela ani vteřinu. 😅
-0:Bouldering! Vůbec se toho neboj, je to mnohem víc o nohách a technice, než o hrubé síle. Klidně ti to někdy ukážu.
-1:Beru tě za slovo! Třeba objevím skrytý talent.
-0:To věřím.
-0:Máš doma psa?🐶 Já mám doma Rexe. Vždycky mě nutí chodit ven.
-1:Jo mám, ale tomu se nechce moc chodit ven.
-0:Jak se Jmenuje?
-1:Diana, ale je docela líná a moc se jí nikam nechce.
-0:haha to je jako můj strejda
-0:chodíš ráda ven
-
+0: Ahoj Kláro! Narazil jsem na tvůj profil a musel jsem ti napsat. Ta fotka ze štítu je fakt neskutečná – úplně z ní jde cítit ta atmosféra. To jsou Tatry? 😊
+1: Ahoj Tome! Moc díky, to mě těší. A jo, trefa do černého – jsou to Rysy. Máš to taky rád, nebo tě hory moc nelákají?
+0: Naopak, hory miluju. I když přiznám se, že naposledy jsem spíš lezl na stěně než někde na vrcholu. Ale ten pocit a výhledy nahoře… to se nedá ničím nahradit.
+1: To věřím! Lezeš bouldering, nebo s lanem? Vždycky mě to lákalo zkusit, ale mám pocit, že bych se neudržela ani pár vteřin. 😅
+0: Bouldering. A fakt se toho neboj – není to jen o síle, spíš o technice, rovnováze a práci nohou. Každý začátek je těžký, ale rychle se do toho dostaneš. Klidně ti to někdy ukážu, jestli budeš chtít.
+1: Tak to beru! Aspoň zjistím, jestli ve mně není nějaký skrytý talent. 😄
+0: Já myslím, že určitě je. Navíc je to docela návykový.
+0: Mimochodem, máš doma psa? 🐶 Já mám Rexe – občas mám pocit, že on venčí mě, ne já jeho.
+1: Jojo, mám. Jmenuje se Diana, ale je to pěkný lenoch – ven ji musím spíš přemlouvat než tahat.
+0: 😄 Tak to je přesný opak Rexe. Ten by byl venku nejradši pořád.
+0: A chodíš teda ráda ven i tak, nebo jsi spíš typ na klidnější program? Třeba kafe nebo něco pohodového?
+1: Asi tak půl na půl. Mám ráda procházky a přírodu, ale zase si umím užít i den někde v kavárně s dobrou kávou.
+0: To zní jako ideální kombinace. Já to mám podobně – jeden den hory nebo lezení a druhý den klidně někde posedět a nic nedělat.
+1: Přesně! Máš nějaké oblíbené místo, kam chodíš?
+0: Poslední dobou docela často chodím na stěnu, ale jinak mám rád místa, kde je klid a není tam moc lidí. A co ty, máš nějaké svoje „tajné“ místo?
+1: Asi jo, mám jedno oblíbené místo u vody, kam chodím, když si chci vyčistit hlavu.
+0: To zní dobře. Taková místa jsou nejlepší. Možná bys mě tam někdy mohla vzít, a já tě na oplátku vezmu na ten bouldering 😄
+1: To zní jako fér dohoda!
+0: Super, tak máme plán. Teď už jen vymyslet, co dřív – jestli lezení, nebo to tvoje tajné místo 😊
+0: Mimochodem, úplně jsme přeskočili základní věci 😄 Kolik ti vlastně je?
+1: Haha, pravda 😄 Je mi 23, ale za 2 měsíce přesně mám narozeniny. A tobě?
+0: Mně 25.
+0: Tak jsme skoro na stejné vlně.
+1: To se hodí 😄
+0: No vidíš, o důvod víc to někdy dotáhnout aspoň na to kafe 🙂

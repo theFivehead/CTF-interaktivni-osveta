@@ -12,13 +12,27 @@
     
     <h1>threat analysis</h1>
     <form action="submit.php" method="POST">
-        <textarea name="post_links" cols="40" rows="10" <?php if(isset($_GET['status'])){
+        <textarea name="post_links" cols="40" rows="10" <?php session_start();
+        if(isset($_GET['status'])){
             if(strcmp($_GET['status'],"f87a12e367556abaa3d9a496a3769e7dde334c762b212fd1e77dc8eece79df9a")==0){
                 echo "class='success'";
                 $flag="flag{dOnt0v3r5har3}";}
                 else if(strcmp($_GET['status'],"false")==0){
                     echo "class='fail'";
-                }} ?>><?php if($flag){echo "\n\n".$flag;} ?></textarea>
+                }} ?>><?php if($flag){echo "\n\n".$flag;}
+                else if(isset($_SESSION["links"])){
+                    $i=1;
+                    $n=count($_SESSION["links"]);
+                    foreach($_SESSION["links"] as $link){
+                        if($i==$n){
+                            echo $link;
+                        }
+                        else{
+                            echo $link."\n";
+                        }
+                        $i++;
+                        
+                    }} ?></textarea>
         <button type="submit">analyzovat</button>
 
     </form>

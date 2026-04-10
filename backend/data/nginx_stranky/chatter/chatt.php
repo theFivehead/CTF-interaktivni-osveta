@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -25,7 +24,7 @@
 
         <?php
         // Načtení stejné konverzace z textového souboru
-        $chat_file = 'chats/1.txt';
+        $chat_file = 'chats/0.txt';
         
         if (file_exists($chat_file)) {
             $lines = file($chat_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
