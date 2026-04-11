@@ -23,6 +23,8 @@ RUN cp cert.pem /etc/ssl/certs/bad_cert.pem && cp key.pem /etc/ssl/private/bad_k
 RUN cp /home/ctf/cert.pem virus_server/cert.pem
 RUN chown www-data:www-data /etc/ssl/certs/bad_cert.pem
 RUN chown www-data:www-data /etc/ssl/private/bad_key.pem
+RUN rm /etc/nginx/nginx.conf
+RUN cp data/nginx.conf /etc/nginx/nginx.conf
 RUN rm -rfd /var/www/*
 RUN cp -r data/nginx_stranky/* /var/www/
 RUN rm /etc/nginx/sites-available/* && rm /etc/nginx/sites-enabled/*
