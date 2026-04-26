@@ -3,7 +3,7 @@ session_start();
 
 // Simulace databáze - přednastavené jméno a heslo
 $valid_username = "klara";
-$valid_password = "6D1anAkáva2003"; // V reálu by tu byl hash hesla (password_hash)
+$valid_password = "6D1anA2003"; // V reálu by tu byl hash hesla (password_hash)
 
 $error = "";
 
