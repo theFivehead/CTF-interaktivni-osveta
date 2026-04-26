@@ -1,5 +1,5 @@
 # Path to your PEM certificate
-$certPath = "\\wsl$\Debian\home\ctf\CTF-interaktivni-osveta\backend\cert.pem"
+$certPath = "C:\Users\windows\Downloads\cert.pem"
 
 # Import the PEM certificate
 $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
@@ -13,5 +13,5 @@ $store.Open("ReadWrite")
 # Add the certificate
 $store.Add($cert)
 $store.Close()
-
+certutil -urlcache * delete
 Write-Output "Certificate installed as Trusted Root successfully!"
