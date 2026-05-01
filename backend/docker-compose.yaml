@@ -16,4 +16,4 @@ services:
     depends_on:
       - mailhog
     environment:
-      - EMAIL_TO="victim@gmail.com"
+      - EMAIL_TO="victim@email.cz"

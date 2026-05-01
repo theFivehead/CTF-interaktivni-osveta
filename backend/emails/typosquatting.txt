@@ -1,5 +1,4 @@
 From: Microsoft Security Team <support.rnicrosofl.com>
-To: victim@lol.test
 Subject: Podezřelé přihlášení k vašemu účtu
 Reply-To: support@rnicrosofl.com
 Message-ID: <alert-48291@rnicrosofl.com>
