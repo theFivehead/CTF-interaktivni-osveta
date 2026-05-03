@@ -33,7 +33,7 @@ else if(isset($_SESSION['new_password'])){//logout
 <body>
 <div class="phone-mockup">
     <div class="header">
-    <h2><a href="passwordchange.php">Restartovat heslo</a></h2>
+    <h2><a href="passwordchange.php">Změnit heslo</a></h2>
     <div class="max"></div>
     <h2><a href="index.php?logout=1">Odhlásit se</a></h2>
         </div>
